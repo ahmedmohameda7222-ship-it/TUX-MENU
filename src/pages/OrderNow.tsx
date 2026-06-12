@@ -56,7 +56,9 @@ export default function OrderNow() {
             return (
               <div 
                 key={category.id} 
-                ref={(el) => (categoryRefs.current[category.id] = el)}
+                ref={(el) => {
+                  categoryRefs.current[category.id] = el;
+                }}
                 className="scroll-mt-32"
               >
                 <h2 className="text-2xl font-black text-[#D4AF37] uppercase tracking-wide mb-6 border-b border-white/10 pb-2">
